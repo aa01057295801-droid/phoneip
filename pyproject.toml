@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phoneip"
+version = "0.3.0"
+description = "Rotate your phone's mobile IP via ADB, root, or HTTP hooks (Android/iOS)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+discord = ["discord.py>=2.3"]
+
+[project.scripts]
+phoneip = "phoneip.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
